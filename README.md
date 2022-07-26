@@ -33,7 +33,6 @@ The test code from this package uses `AddAWSInstrumentation()` extension method 
 Following steps could be used for demonstration purposes:
 - Clone the repository.
 - Navigate to the root of OpenTelemetryTestConsoleApp .NET project (`OpenTelemetryTestConsoleApp.csproj`) file.
-- Execute command `dotnet restore` to restore NuGet package.
 - Execute command `dotnet build --configuration Release` to build the project in `Release` configuration.
 - Navigate to directory `bin/Release/net6.0`.
 - Execute command `dotnet OpenTelemetryTestConsoleApp.dll` to run the demo application.
