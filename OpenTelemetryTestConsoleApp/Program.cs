@@ -19,7 +19,7 @@ using var tracerProvider = Sdk.CreateTracerProviderBuilder()
     .Build();
 
 var s3Client = new AmazonS3Client();
-_ = s3Client.ListBucketsAsync().Result;
+_ = await s3Client.ListBucketsAsync();
 
 var dynamoDbClient = new AmazonDynamoDBClient();
-_ = dynamoDbClient.ListTablesAsync().Result;
+_ = await dynamoDbClient.ListTablesAsync();
