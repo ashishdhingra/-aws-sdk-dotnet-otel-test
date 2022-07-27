@@ -38,45 +38,62 @@ Following steps could be used for demonstration purposes:
 This produces the following output:
 
 ```console
-Activity.TraceId:          a20bd93d93281e6e725846d0185bfc78
-Activity.SpanId:           89794b6d59ba4665
+Resource associated with Metric:
+    service.name: MyCompany.MyProduct.MyService
+    service.version: 1.0.0
+    service.instance.id: a191b4c8-9d1a-4182-b423-69ed200c45aa
+Activity.TraceId:          5c22f3104e1214f8058fc917ea1104c1
+Activity.SpanId:           a3761faa2093d391
 Activity.TraceFlags:           Recorded
 Activity.ActivitySourceName: Amazon.AWS.AWSClientInstrumentation
 Activity.DisplayName: S3.ListBuckets
 Activity.Kind:        Client
-Activity.StartTime:   2022-07-25T23:40:48.7665680Z
-Activity.Duration:    00:00:03.6271640
+Activity.StartTime:   2022-07-27T21:34:41.7679270Z
+Activity.Duration:    00:00:03.6765920
 Activity.Tags:
     aws.service: S3
     aws.operation: ListBuckets
     aws.region: us-east-2
-    aws.requestId: EBD70Y5PABDCVXX2
+    aws.requestId: 3CNM9B8AHQFZBED1
     http.status_code: 200
     http.response_content_length: 0
 Resource associated with Activity:
     service.name: MyCompany.MyProduct.MyService
     service.version: 1.0.0
-    service.instance.id: 6e23c968-d924-4480-90a2-4e623a1ced23
+    service.instance.id: 6be77db6-7af9-4bb1-b2f5-a348bdcd37c3
 
-Activity.TraceId:          74da628613d7627e664d841a4e63524a
-Activity.SpanId:           20183b5dbf0cc5a4
+Activity.TraceId:          3556a9f0f348920950c159afa16f4c9b
+Activity.SpanId:           89c0321f4878de0d
 Activity.TraceFlags:           Recorded
 Activity.ActivitySourceName: Amazon.AWS.AWSClientInstrumentation
 Activity.DisplayName: DynamoDBv2.ListTables
 Activity.Kind:        Client
-Activity.StartTime:   2022-07-25T23:40:52.4184170Z
-Activity.Duration:    00:00:00.3135650
+Activity.StartTime:   2022-07-27T21:34:45.4569510Z
+Activity.Duration:    00:00:00.3085510
 Activity.Tags:
     aws.service: DynamoDBv2
     aws.operation: ListTables
     aws.region: us-east-2
-    aws.requestId: U3IHGUEFDOO23SH0592LQUD9KVVV4KQNSO5AEMVJF66Q9ASUAAJG
+    aws.requestId: FAJPNUMLFSP5D2KJI5G5EP6FUVVV4KQNSO5AEMVJF66Q9ASUAAJG
     http.status_code: 200
-    http.response_content_length: 28
+    http.response_content_length: 17
 Resource associated with Activity:
     service.name: MyCompany.MyProduct.MyService
     service.version: 1.0.0
-    service.instance.id: 6e23c968-d924-4480-90a2-4e623a1ced23
+    service.instance.id: 6be77db6-7af9-4bb1-b2f5-a348bdcd37c3
+
+
+Export DynamoDB.ListTables, A count of number of requests, Unit: request(s), Meter: TestMeter
+(2022-07-27T21:34:41.5044230Z, 2022-07-27T21:34:45.8397100Z] LongSum
+Value: 1
+
+Export DynamoDB.ListTables, A count of number of requests, Unit: request(s), Meter: TestMeter
+(2022-07-27T21:34:41.5044230Z, 2022-07-27T21:34:45.9364000Z] LongSum
+Value: 2
+
+Export DynamoDB.ListTables, A count of number of requests, Unit: request(s), Meter: TestMeter
+(2022-07-27T21:34:41.5044230Z, 2022-07-27T21:34:46.0361970Z] LongSum
+Value: 3
 ```
 
 ## References
