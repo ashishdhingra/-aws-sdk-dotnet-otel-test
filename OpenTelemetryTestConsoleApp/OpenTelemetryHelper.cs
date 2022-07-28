@@ -11,6 +11,7 @@ namespace OpenTelemetryTestConsoleApp
 	{
 		public static TracerProvider ConfigureTracerProvider(string serviceName, string serviceVersion)
         {
+            var zipkinUri = "http://localhost:9411/api/v2/spans";
             var tracerProvider = Sdk.CreateTracerProviderBuilder()
                 .AddSource(serviceName)
                 .SetResourceBuilder(
@@ -18,6 +19,10 @@ namespace OpenTelemetryTestConsoleApp
                         .AddService(serviceName: serviceName, serviceVersion: serviceVersion))
                 .AddAWSInstrumentation()
                 .AddConsoleExporter()
+                .AddZipkinExporter(o =>
+                {
+                    o.Endpoint = new Uri(zipkinUri);
+                })
                 .Build();
 
             return tracerProvider;

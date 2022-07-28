@@ -95,6 +95,8 @@ Export DynamoDB.ListTables, A count of number of requests, Unit: request(s), Met
 (2022-07-27T21:34:41.5044230Z, 2022-07-27T21:34:46.0361970Z] LongSum
 Value: 3
 ```
+**ZipKins trace example:**
+![ZipKins example](images/zipkins_exporter_example.png?raw=true)
 
 ## References
 - [OpenTelemetry .NET](https://github.com/open-telemetry/opentelemetry-dotnet)
